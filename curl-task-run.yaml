@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  generateName: curling-cool-dog-facts-
+spec:
+  taskSpec:
+    resources: {}
+    steps:
+    - image: quay.io/ibmgaragecloud/alpine-curl
+      name: retrieve-dog-facts
+      resources: {}
+      script: |
+        curl 'https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=2'
+ 
