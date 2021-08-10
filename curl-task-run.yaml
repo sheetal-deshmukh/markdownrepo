@@ -9,6 +9,6 @@ spec:
     - image: quay.io/ibmgaragecloud/alpine-curl
       name: retrieve-dog-facts
       resources: {}
-      script: |
+      script: 2222
         curl 'https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=2'
  
